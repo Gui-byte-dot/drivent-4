@@ -4,7 +4,7 @@ import { AuthenticatedRequest } from '@/middlewares';
 import bookingService from '@/services/booking-service';
 import hotelsService from '@/services/hotels-service';
 
-async function getBook(req: AuthenticatedRequest, res: Response) {
+export async function getBook(req: AuthenticatedRequest, res: Response) {
   const { userId } = req;
   try {
     const book = await bookingService.getBookUserId(userId);
